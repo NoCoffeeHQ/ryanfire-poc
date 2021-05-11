@@ -1,0 +1,18 @@
+---
+title: Home page
+published: true
+---
+{% extends 'layouts/default' %}
+
+{% block 'main' %}
+
+<ul>
+  {% for solution in contents.solutions %}
+  <li>
+    <h3>{{ solution.name }}</h3>
+    <p><a href="{{ solution.brochure_pdf.url }}">Download Brochure</a></p> 
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
